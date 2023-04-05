@@ -1,0 +1,12 @@
+- O cliente da Olist é o Vendedor;
+- São pequenos empreendedores, micro empresas, ou empresas individuais;
+- O Lifetime Value (LTV) destes vendedores está caindo;
+- Quais ações podemos tomar para aumentar o LTV?
+	a. Redução de Churn?
+	b. Aumentar a frequência?
+	c. Aumento do valor das vendas?
+
+
+Definir os objetivos;
+Criar um projeto no github;
+Issues: variavies avaliação
