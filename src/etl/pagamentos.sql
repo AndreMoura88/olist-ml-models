@@ -1,5 +1,9 @@
 WITH tb_join AS (
 
+-- Seleciona os dados de pagamentos e itens de pedido para cada pedido
+  -- criado antes de 01/01/2018 e após 6 meses da data de 01/01/2018
+  -- onde o vendedor do item é conhecido (não é nulo)
+
   SELECT t2.*,
          t3.idVendedor
 
@@ -19,6 +23,10 @@ WITH tb_join AS (
 
 tb_group AS (
 
+-- Agrupa os dados por vendedor e tipo de pagamento,
+  -- calculando a quantidade e valor total de pedidos para cada meio de pagamento
+  -- e ordenando por vendedor e tipo de pagamento
+
   SELECT idVendedor,
          descTipoPagamento,
          count(distinct idPedido) as qtdePedidoMeioPagamento,
@@ -30,6 +38,10 @@ tb_group AS (
   ORDER BY idVendedor, descTipoPagamento
 
 )
+
+-- Seleciona os dados de quantidade e valor total de pedidos
+-- para cada vendedor e tipo de pagamento,
+-- calculando as percentagens em relação ao total de pedidos e ao total do valor
 
 SELECT 
   idVendedor,
